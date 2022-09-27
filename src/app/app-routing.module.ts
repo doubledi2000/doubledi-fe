@@ -1,21 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { ROUTER_UTILS } from './shared/utils/router.utils';
-import { SidebarComponent } from './core/layout/sidebar/sidebar.component';
 
-const  routes: Routes = [
-  {
-    path: ROUTER_UTILS.base.home,
-    component: SidebarComponent
-  }
-]
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/welcome' },
+  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
