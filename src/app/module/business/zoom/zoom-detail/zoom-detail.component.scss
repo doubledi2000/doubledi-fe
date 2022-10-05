@@ -1,0 +1,44 @@
+.zoom {
+    background-image: url("../../../../../assets/1.jpg");
+    overflow: scroll;
+}
+
+.zoom .display {
+    height: 200px;
+}
+
+.zoom .row{
+    display: inline-flex;
+}
+
+.zoom .left-way{
+    margin-left: 100px;
+}
+
+.zoom .left-way{
+    margin-right: 100px;
+}
+
+.zoom .seat {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    display: inline-block;
+    margin: 5px 5px ;
+}
+
+.zoom .avalable{
+    background-color: #999999;
+}
+
+.zoom .holded{
+    background-color: #FFFF00;
+}
+
+.zoom .your-select{
+    background-color: #32CD32;
+}
+
+.zoom .solded{
+    background-color: #8B4513;
+}
